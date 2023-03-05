@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Wrong Answers Only</title>
+</head>
+<body>
+    <div class="title">
+        <h1 id="verName" class="mode-change">Wrong Answers<br>ONLY</h1>
+    </div>
+    <!-- info container -->
+    <div class="container hide" id="info-container">
+        <i class="material-icons" id="close-btn">cancel</i>
+        <h3>In <em>Wrong Answers Only</em> mode, this program will very likely give you an incorrect definition.</h3></br>
+        <h3>Click the Toggle button in the lower left corner for <em>Wrong Answers Sometimes</em>
+        mode, in which this program will try to provide you an accurate word definition.</br></h3>
+        <h3>Use the slider below to increase the randomness of the results!</br></h3>
+            <div id="slider-container">
+                <input type="range" id="random-slider" min="0" max="10" value="5">
+                <div id="slider-value">0</div>
+            </div>
+    </div>
+
+    <!-- Main box div -->
+    <div id="main-container" class="container">
+        <i class="material-icons" id="info">info</i>
+        <p id="what-is">What is...</p>
+        <!-- search bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Enter your word here" id="user-word"/>
+            <button id="search-btn">Search</button>
+        </div>
+
+        <!-- result -->
+        <div class="result mode-change" id="">
+            
+        </div>
+
+    </div>
+    <div class="other-container">
+        <!-- Mode change toggle -->
+        <i id="toggle-btn" class="material-icons">check_circle</i>
+    </div>
+    
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
