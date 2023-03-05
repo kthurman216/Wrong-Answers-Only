@@ -10,6 +10,7 @@ const infoCont = document.getElementById("info-container");
 const closeButton = document.getElementById("close-btn");
 const randSlider = document.getElementById("random-slider");
 const sliderValue = document.getElementById("slider-value");
+const sliderCont = document.getElementById("slider-container");
 
 //PLEASE LOOK UP THAT PROTECTING API KEY THING AGAIN KAYLA JFC
 //endpoint constants
@@ -217,10 +218,11 @@ function toggleMode() {
         document.getElementById("user-word").style.boxShadow = "0 10px 20px #d58936";
         document.getElementById("search-btn").style.backgroundColor = pal2Mid2;
         document.getElementById("info").style.color = pal2Mid1;
+        randSlider.disabled = true;
         closeButton.style.color = pal2Mid1;
 
         //change toggle icon to WAS mode
-        toggleButton.innerHTML = `<i id="toggle-btn" class="material-icons">cancel</i>`;
+        toggleButton.innerHTML = `<i id="toggle-btn" class="material-icons" title="Wrong Answers Only Mode">swap_vertical_circle</i>`;
         toggleButton.style.color = pal2Dark;
 
 
@@ -240,9 +242,10 @@ function toggleMode() {
         document.getElementById("user-word").style.boxShadow = "0 10px 20px #b8dbd9";
         document.getElementById("search-btn").style.backgroundColor = pal1Mid2;
         document.getElementById("info").style.color = pal1Mid1;
+        randSlider.disabled = false;
 
          //change icon back to WAO mode
-         toggleButton.innerHTML = `<i id="toggle-btn" class="material-icons">check_circle</i>`;
+         toggleButton.innerHTML = `<i id="toggle-btn" class="material-icons" title="Wrong Answer Sometimes Mode">swap_vertical_circle</i>`;
 
         //change text back
         title.innerHTML = `<h1 id="verName" class="mode-change">Wrong Answers</br>ONLY</h1>`;
